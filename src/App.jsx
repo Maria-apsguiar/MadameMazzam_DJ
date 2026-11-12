@@ -540,7 +540,7 @@ export default function App() {
                 src: "/images/hero-night.jpg",
                 fallback: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800",
                 title: "Vibe Night / Club & Skyline",
-                tag: "Editorial Noturno"
+                tag: "Rooftop Noturno"
               },
               {
                 src: "/images/sunset-pioneer.jpg",

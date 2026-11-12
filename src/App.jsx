@@ -101,16 +101,16 @@ export default function App() {
         </div>
       </header>
 
-      {/* 2. HERO SECTION */}
-      <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16">
+      {/* 2. HERO SECTION COM ENQUADRAMENTO CORRIGIDO (ROSTO VISÍVEL) */}
+      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-20">
         <div 
-          className="absolute inset-0 bg-cover bg-center z-0 scale-105 filter brightness-50 contrast-125"
+          className="absolute inset-0 bg-cover bg-[center_top_10%] z-0 filter brightness-60 contrast-110"
           style={{ 
             backgroundImage: `url('/images/hero-night.jpg'), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1800')` 
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#08080a] via-[#08080a]/75 to-transparent z-10" />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#08080a] via-transparent to-[#08080a]/60 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#08080a] via-[#08080a]/60 to-[#08080a]/30 z-10" />
+        <div className="absolute inset-0 bg-radial-gradient from-transparent to-[#08080a]/80 z-10" />
 
         <div className="relative z-20 max-w-4xl mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/80 border border-zinc-700/60 backdrop-blur-sm mb-6 text-zinc-300 text-xs tracking-wider uppercase">
@@ -125,7 +125,7 @@ export default function App() {
             </span>
           </h1>
 
-          <p className="text-zinc-300 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed mb-10">
+          <p className="text-zinc-200 text-base sm:text-lg max-w-2xl mx-auto font-light leading-relaxed mb-10 drop-shadow-md">
             A trilha sonora perfeita para restaurantes de alta gastronomia, sunsets exclusivos, 
             beach clubs e celebrações corporativas de alto padrão.
           </p>
@@ -196,37 +196,45 @@ export default function App() {
               </p>
             </div>
 
-            {/* LINKS DO SOUNDCLOUD */}
+            {/* LINKS DO SOUNDCLOUD COM PLAYER OFICIAL E LINK EXATO */}
             <div className="lg:col-span-5 flex flex-col gap-4">
               
-              <div className="p-5 rounded-2xl bg-zinc-900/70 border border-amber-500/30 hover:border-amber-500/60 transition-all">
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex items-center gap-3">
-                    <div className="p-2.5 rounded-xl bg-amber-400/10 text-amber-400">
-                      <Disc className="w-5 h-5 animate-spin-slow" />
+              {/* SET 1: AFROHOUSE OFICIAL */}
+              <div className="p-4 rounded-2xl bg-zinc-900/70 border border-amber-500/40 hover:border-amber-500/70 transition-all">
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex items-center gap-2">
+                    <div className="p-2 rounded-lg bg-amber-400/10 text-amber-400">
+                      <Disc className="w-4 h-4 animate-spin-slow" />
                     </div>
                     <div>
-                      <span className="text-[10px] uppercase font-mono text-amber-400 tracking-wider">Destaque SoundCloud</span>
-                      <h3 className="text-zinc-100 font-medium text-sm">Set Afrohouse & House</h3>
+                      <span className="text-[10px] uppercase font-mono text-amber-400 tracking-wider block">SoundCloud Oficial</span>
+                      <h3 className="text-zinc-100 font-medium text-xs">Set Afrohouse & House - Madame Mazzam</h3>
                     </div>
                   </div>
-                  <span className="text-[11px] font-mono text-zinc-400 bg-zinc-800/80 px-2 py-0.5 rounded">Completo</span>
+                  <a 
+                    href="https://soundcloud.com/madame_mazzam/set-afrohouse-house-madame" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-mono text-amber-400 hover:text-amber-300 inline-flex items-center gap-1"
+                  >
+                    Ouvir <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
-                <p className="text-zinc-400 text-xs font-light mb-4 leading-relaxed">
-                  Batidas percussivas, graves profundos e harmonias solares. A combinação ideal para tardes em beach clubs e sunsets.
-                </p>
-                <a 
-                  href="https://soundcloud.com/search?q=madame%20mazzam" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-[#ff5500]/10 hover:bg-[#ff5500]/20 text-[#ff7733] border border-[#ff5500]/30 py-2.5 rounded-xl text-xs font-medium transition-colors"
-                >
-                  <Music className="w-3.5 h-3.5" />
-                  <span>Ouvir Set Afrohouse no SoundCloud</span>
-                  <ExternalLink className="w-3 h-3 ml-1" />
-                </a>
+
+                {/* Player incorporado direto do SoundCloud */}
+                <div className="rounded-xl overflow-hidden border border-zinc-800 bg-black">
+                  <iframe 
+                    width="100%" 
+                    height="130" 
+                    scrolling="no" 
+                    frameBorder="no" 
+                    allow="autoplay; encrypted-media" 
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2344417571&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+                  />
+                </div>
               </div>
 
+              {/* SET 2: SUNSET ORGANIC HOUSE */}
               <div className="p-4 rounded-xl bg-zinc-900/40 border border-zinc-800/90 hover:border-zinc-700 transition-all">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs font-medium text-zinc-200">Sunset Organic House — Live at Shopping</span>
@@ -234,16 +242,17 @@ export default function App() {
                 </div>
                 <p className="text-zinc-400 text-xs font-light mb-3">Melódico, calmo e sofisticado para ambientes corporativos e gastronômicos.</p>
                 <a 
-                  href="https://soundcloud.com/search?q=madame%20mazzam" 
+                  href="https://soundcloud.com/madame_mazzam" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-xs text-zinc-300 hover:text-amber-400 inline-flex items-center gap-1.5 transition-colors font-medium"
                 >
-                  <span>Acessar faixa no SoundCloud</span>
+                  <span>Acessar faixa no perfil</span>
                   <ChevronRight className="w-3.5 h-3.5" />
                 </a>
               </div>
 
+              {/* SET 3: MINI SET #1 */}
               <div className="p-4 rounded-xl bg-zinc-900/40 border border-zinc-800/90 hover:border-zinc-700 transition-all">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs font-medium text-zinc-200">Mini Set #1 [30 min]</span>
@@ -251,12 +260,12 @@ export default function App() {
                 </div>
                 <p className="text-zinc-400 text-xs font-light mb-3">Seleção dinâmica ideal para coquetéis e aberturas de pistas.</p>
                 <a 
-                  href="https://soundcloud.com/search?q=madame%20mazzam" 
+                  href="https://soundcloud.com/madame_mazzam" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-xs text-zinc-300 hover:text-amber-400 inline-flex items-center gap-1.5 transition-colors font-medium"
                 >
-                  <span>Acessar faixa no SoundCloud</span>
+                  <span>Acessar faixa no perfil</span>
                   <ChevronRight className="w-3.5 h-3.5" />
                 </a>
               </div>
@@ -472,7 +481,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 6. PRESS KIT / GALERIA DE FOTOS */}
+      {/* 6. PRESS KIT / GALERIA DE FOTOS (SEM O TEXTO LOOK PRETO RENDADO) */}
       <section id="presskit" className="py-20 border-t border-zinc-800/60">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -496,28 +505,28 @@ export default function App() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               {
-                src: "/images/night-skyline.jpg",
+                src: "/images/hero-night.jpg",
                 fallback: "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=800",
                 title: "Vibe Night / Club & Skyline",
-                tag: "Look Preto Rendado"
+                tag: "Editorial Noturno"
               },
               {
                 src: "/images/sunset-pioneer.jpg",
                 fallback: "https://images.unsplash.com/photo-1571266028243-3716f02d2d2e?q=80&w=800",
                 title: "Vibe Sunset / Golden Hour",
-                tag: "Pioneer XDJ-RR & Óculos Escuros"
+                tag: "Live Performance"
               },
               {
                 src: "/images/night-bw.jpg",
                 fallback: "https://images.unsplash.com/photo-1540039155733-5bb30b53aa14?q=80&w=800",
                 title: "Editorial Night P&B",
-                tag: "Press & Curadoria"
+                tag: "Visual Identity"
               },
               {
                 src: "/images/sunset-closeup.jpg",
                 fallback: "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?q=80&w=800",
                 title: "Beach Clubs & Sunsets",
-                tag: "Tardezinhas & Esportivos"
+                tag: "Day Events"
               }
             ].map((img, i) => (
               <div key={i} className="group relative rounded-xl overflow-hidden aspect-[3/4] bg-zinc-900 border border-zinc-800">

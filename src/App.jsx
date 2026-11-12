@@ -234,7 +234,7 @@ export default function App() {
                 </div>
               </div>
 
-              {/* SET 2: SUNSET ORGANIC HOUSE */}
+{/* SET 2: SUNSET ORGANIC HOUSE */}
               <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/90 shadow-md">
                 <div className="flex items-center justify-between mb-2.5">
                   <div className="flex items-center gap-2">
@@ -243,16 +243,16 @@ export default function App() {
                     </div>
                     <div>
                       <span className="text-[10px] uppercase font-mono text-zinc-400 tracking-wider block">Sunset Session</span>
-                      <h3 className="text-zinc-100 font-medium text-xs">Sunset Organic House — Live at Shopping[cite: 2]</h3>
+                      <h3 className="text-zinc-100 font-medium text-xs">Sunset Organic House — Live at Shopping</h3>
                     </div>
                   </div>
                   <a 
-                    href="https://soundcloud.com/madame_mazzam" 
+                    href="https://soundcloud.com/madame_mazzam/sunset-organic-house" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-[11px] font-mono text-zinc-400 hover:text-amber-300 inline-flex items-center gap-1"
                   >
-                    Perfil <ExternalLink className="w-3 h-3" />
+                    Abrir <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
 
@@ -263,7 +263,7 @@ export default function App() {
                     scrolling="no" 
                     frameBorder="no" 
                     allow="autoplay; encrypted-media" 
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/madame_mazzam&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/madame_mazzam/sunset-organic-house&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
                   />
                 </div>
               </div>
@@ -277,16 +277,16 @@ export default function App() {
                     </div>
                     <div>
                       <span className="text-[10px] uppercase font-mono text-zinc-400 tracking-wider block">House Sofisticado</span>
-                      <h3 className="text-zinc-100 font-medium text-xs">Mini Set #1 [30 min][cite: 2]</h3>
+                      <h3 className="text-zinc-100 font-medium text-xs">Mini Set #1 [30 min]</h3>
                     </div>
                   </div>
                   <a 
-                    href="https://soundcloud.com/madame_mazzam" 
+                    href="https://soundcloud.com/madame_mazzam/mini-set-1" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-[11px] font-mono text-zinc-400 hover:text-amber-300 inline-flex items-center gap-1"
                   >
-                    Perfil <ExternalLink className="w-3 h-3" />
+                    Abrir <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
 
@@ -297,7 +297,7 @@ export default function App() {
                     scrolling="no" 
                     frameBorder="no" 
                     allow="autoplay; encrypted-media" 
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/madame_mazzam&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/madame_mazzam/mini-set-1&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
                   />
                 </div>
               </div>

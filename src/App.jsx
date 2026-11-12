@@ -1,44 +1,3 @@
-Aqui estão as soluções para os pontos estratégicos, jurídicos e técnicos, seguidos pelo código atualizado da Landing Page:
-
----
-
-### 1. Respostas Estratégicas & Jurídicas
-
-* **O erro do Player do YouTube:**
-O YouTube bloqueia visualizações em `iframe` quando o parâmetro de origem não está limpo ou quando o vídeo possui restrição de incorporação de terceiros. Ajustamos a URL de incorporação para `[https://www.youtube-nocookie.com/embed/-Ni9VMmRRUM](https://www.youtube-nocookie.com/embed/-Ni9VMmRRUM)` com atributos de permissão completos (`autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture`). Adicionamos também um botão de fallback: se a rede ou o navegador do cliente travar o player, um clique abre o set direto no YouTube.
-* **Link do Set Afrohouse no SoundCloud:**
-Adicionado ao bloco de áudio junto aos outros sets de SoundCloud já listados.
-* **Política de 50% na reserva e 50% até a véspera:**
-**Sim, é 100% legal e é o padrão ouro da indústria de eventos.**
-* *Amparo Jurídico:* O Código Civil Brasileiro (arts. 417 a 420) regulamenta isso como **Sinal / Arras Confirmatórias**. A entrada de 50% garante o bloqueio exclusivo da data na agenda (impedindo que a DJ aceite outro trabalho no mesmo horário), enquanto a quitação prévia protege contra inadimplência após a prestação do serviço.
-* *Profissionalismo:* Em vez de expor termos burocráticos no topo, incluímos isso de forma polida e transparente no rodapé da seção de contratação sob a chancela: *"Reserva de data mediante sinal de 50% via contrato formal e saldo quitado até a véspera da apresentação"*. Transmite seriedade e maturidade comercial.
-
-
-* **Como usar as fotos reais da DJ no Lovable / Vercel:**
-Como geramos código React/Vite, o navegador precisa puxar os arquivos locais do seu projeto. Para que as fotos reais apareçam imediatamente:
-1. Crie uma pasta chamada `images` dentro da pasta `public` do seu projeto no Lovable/Vercel (`/public/images/`).
-2. Salve os arquivos de fotos com nomes simples (ex: `hero-night.jpg`, `sunset-pioneer.jpg`, `night-skyline.jpg`, `sunset-detail.jpg`).
-3. No código abaixo, estruturamos os caminhos relativos apontando para essas imagens com tratamento de fallback caso o arquivo demore a carregar.
-
-
-* **Substituição de "Sound Architect":**
-Trocamos por **"Curadoria & Identidade Musical"** com o subtítulo: *"A atmosfera sonora ideal para elevar a experiência do seu espaço."*
-* **3 Formatos de Contratação:**
-1. *Performance DJ (Exclusivo para casas com rider completo)*
-2. *Performance DJ + Rider Próprio (Controladora Pioneer XDJ-RR + Fone Pioneer DJ + Cabeamento XLR/RCA balanceado)*
-
-
-3. *Full Experience (Performance + Equipamento + Sonorização sob medida)*
-
-
-* **Campos no Formulário de Cotação:**
-Adicionados os campos de **Duração estimada (horas de set)** e **CEP / Bairro e Cidade**, integrados automaticamente à mensagem gerada para o WhatsApp.
-
----
-
-### Código Atualizado (`App.jsx`)
-
-```jsx
 import React, { useState } from 'react';
 import { 
   Play, 
@@ -144,7 +103,6 @@ export default function App() {
 
       {/* 2. HERO SECTION */}
       <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-16">
-        {/* Imagem de Fundo (Configure o arquivo em /public/images/hero-night.jpg) */}
         <div 
           className="absolute inset-0 bg-cover bg-center z-0 scale-105 filter brightness-50 contrast-125"
           style={{ 
@@ -206,7 +164,7 @@ export default function App() {
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
-            {/* VÍDEO DO YOUTUBE CORRIGIDO */}
+            {/* VÍDEO DO YOUTUBE */}
             <div className="lg:col-span-7 bg-zinc-900/90 rounded-2xl border border-zinc-800 overflow-hidden shadow-2xl p-4">
               <div className="flex items-center justify-between pb-3 px-1 border-b border-zinc-800/80 mb-3">
                 <div className="flex items-center gap-2">
@@ -238,10 +196,9 @@ export default function App() {
               </p>
             </div>
 
-            {/* LINKS DO SOUNDCLOUD COM O NOVO SET AFROHOUSE */}
+            {/* LINKS DO SOUNDCLOUD */}
             <div className="lg:col-span-5 flex flex-col gap-4">
               
-              {/* SET 1: AFROHOUSE & HOUSE */}
               <div className="p-5 rounded-2xl bg-zinc-900/70 border border-amber-500/30 hover:border-amber-500/60 transition-all">
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex items-center gap-3">
@@ -270,7 +227,6 @@ export default function App() {
                 </a>
               </div>
 
-              {/* SET 2: SUNSET ORGANIC HOUSE */}
               <div className="p-4 rounded-xl bg-zinc-900/40 border border-zinc-800/90 hover:border-zinc-700 transition-all">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs font-medium text-zinc-200">Sunset Organic House — Live at Shopping</span>
@@ -288,7 +244,6 @@ export default function App() {
                 </a>
               </div>
 
-              {/* SET 3: MINI SET #1 */}
               <div className="p-4 rounded-xl bg-zinc-900/40 border border-zinc-800/90 hover:border-zinc-700 transition-all">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs font-medium text-zinc-200">Mini Set #1 [30 min]</span>
@@ -311,7 +266,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 4. CURADORIA & IDENTIDADE MUSICAL (VERTENTES & AMBIENTES) */}
+      {/* 4. CURADORIA & IDENTIDADE MUSICAL */}
       <section id="estilos" className="py-20 border-t border-zinc-800/60">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -365,7 +320,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 5. FORMATOS DE APRESENTAÇÃO & RIDER TÉCNICO (3 OPÇÕES) */}
+      {/* 5. FORMATOS DE APRESENTAÇÃO & RIDER TÉCNICO */}
       <section id="formatos" className="py-20 border-t border-zinc-800/60 bg-zinc-950/70">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center max-w-2xl mx-auto mb-16">
@@ -380,7 +335,7 @@ export default function App() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            {/* OPÇÃO 1: APENAS PERFORMANCE */}
+            {/* OPÇÃO 1 */}
             <div className="p-7 rounded-2xl bg-zinc-900/40 border border-zinc-800 flex flex-col justify-between">
               <div>
                 <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider block mb-2">Opção 01</span>
@@ -417,7 +372,7 @@ export default function App() {
               </a>
             </div>
 
-            {/* OPÇÃO 2: PERFORMANCE + RIDER PRÓPRIO (DESTAQUE) */}
+            {/* OPÇÃO 2 */}
             <div className="p-7 rounded-2xl bg-zinc-900/90 border-2 border-amber-500/60 relative flex flex-col justify-between shadow-2xl shadow-amber-950/20">
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-amber-400 text-zinc-950 text-[10px] uppercase font-bold tracking-widest px-3 py-1 rounded-full shadow-md">
                 Mais Solicitado
@@ -462,7 +417,7 @@ export default function App() {
               </a>
             </div>
 
-            {/* OPÇÃO 3: FULL EXPERIENCE (COM SOM) */}
+            {/* OPÇÃO 3 */}
             <div className="p-7 rounded-2xl bg-zinc-900/40 border border-zinc-800 flex flex-col justify-between">
               <div>
                 <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider block mb-2">Opção 03</span>
@@ -501,7 +456,6 @@ export default function App() {
 
           </div>
 
-          {/* POLÍTICA DE RESERVA TRANSPARENTE E LEGAL */}
           <div className="mt-12 p-4 rounded-xl bg-zinc-900/60 border border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
             <div className="flex items-center gap-3">
               <ShieldCheck className="w-5 h-5 text-amber-400 shrink-0" />
@@ -518,7 +472,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 6. PRESS KIT / GALERIA DE FOTOS OFICIAIS */}
+      {/* 6. PRESS KIT / GALERIA DE FOTOS */}
       <section id="presskit" className="py-20 border-t border-zinc-800/60">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -539,7 +493,6 @@ export default function App() {
             </div>
           </div>
 
-          {/* Grid de Fotos: salve os arquivos na pasta /public/images/ conforme abaixo */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               {
@@ -572,7 +525,6 @@ export default function App() {
                   src={img.src} 
                   alt={img.title}
                   onError={(e) => {
-                    // Fallback caso a imagem ainda não esteja na pasta /public/images/
                     e.currentTarget.src = img.fallback;
                   }}
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
@@ -596,7 +548,7 @@ export default function App() {
         </div>
       </section>
 
-      {/* 7. FORMULÁRIO DE ORÇAMENTO & CONSULTA DE DISPONIBILIDADE */}
+      {/* 7. FORMULÁRIO DE ORÇAMENTO */}
       <section id="orcamento" className="py-20 border-t border-zinc-800/60 bg-gradient-to-b from-[#08080a] to-zinc-950">
         <div className="max-w-3xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
@@ -802,7 +754,7 @@ export default function App() {
         </div>
       </footer>
 
-      {/* BOTÃO FLUTUANTE DE WHATSAPP (FIXO EM TODAS AS TELAS) */}
+      {/* BOTÃO FLUTUANTE DE WHATSAPP */}
       <a 
         href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent("Olá! Gostaria de consultar a disponibilidade da DJ Madame Mazzam para um evento.")}`}
         target="_blank" 
@@ -816,5 +768,3 @@ export default function App() {
     </div>
   );
 }
-
-```

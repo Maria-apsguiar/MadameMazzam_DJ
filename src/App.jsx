@@ -101,7 +101,7 @@ export default function App() {
         </div>
       </header>
 
-    {/* 2. HERO SECTION ORIGINAL (SEM SOMBRA LATERAL E COM ROSTO/OLHOS LIVRES) */}
+{/* 2. HERO SECTION ORIGINAL (SEM SOMBRA LATERAL E COM ROSTO/OLHOS LIVRES) */}
       <section className="relative min-h-[92vh] flex items-end justify-center overflow-hidden pb-16 pt-32">
         {/* Foto original limpa, sem filtros pesados e com enquadramento no topo */}
         <div 
@@ -141,7 +141,19 @@ export default function App() {
               className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold px-7 py-3.5 rounded-xl text-xs uppercase tracking-widest transition-all duration-300 shadow-xl shadow-amber-500/25"
             >
               <Calendar className="w-4 h-4" />
-              <span>Consultar
+              <span>Consultar Agenda & Orçamento</span>
+            </a>
+            <a 
+              href="#experiencia" 
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-zinc-950/80 hover:bg-zinc-900 border border-zinc-700/80 text-zinc-200 font-medium px-6 py-3.5 rounded-xl text-xs uppercase tracking-widest transition-all backdrop-blur-sm"
+            >
+              <Play className="w-3.5 h-3.5 fill-current text-amber-400" />
+              <span>Ver Apresentação</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
       
 {/* 3. SETS, VÍDEO & EXPERIÊNCIA AUDITIVA */}
       <section id="experiencia" className="py-20 border-t border-zinc-800/60 bg-zinc-950/50">

@@ -101,58 +101,47 @@ export default function App() {
         </div>
       </header>
 
-    {/* 2. HERO SECTION COM ROSTO LIVRE & ALINHAMENTO LATERAL */}
-      <section className="relative min-h-[92vh] flex items-center justify-center overflow-hidden py-24">
-        {/* Foto com foco no topo/centro */}
+    {/* 2. HERO SECTION ORIGINAL (SEM SOMBRA LATERAL E COM ROSTO/OLHOS LIVRES) */}
+      <section className="relative min-h-[92vh] flex items-end justify-center overflow-hidden pb-16 pt-32">
+        {/* Foto original limpa, sem filtros pesados e com enquadramento no topo */}
         <div 
-          className="absolute inset-0 bg-cover bg-[center_top_5%] z-0 filter brightness-65 contrast-110"
+          className="absolute inset-0 bg-cover bg-[center_top_8%] z-0 filter contrast-105"
           style={{ 
             backgroundImage: `url('/images/hero-night.jpg'), url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=1800')` 
           }}
         />
-        {/* Degradê vertical para suavizar o topo e a base */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#08080a] via-transparent to-[#08080a]/60 z-10" />
-        {/* Degradê horizontal: escurece a esquerda para leitura e deixa o rosto limpo no centro/direita */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#08080a]/90 via-[#08080a]/50 to-transparent z-10" />
+        
+        {/* Gradiente sutil apenas na transição inferior para o preto do site (sem manchas nas laterais) */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#08080a] via-[#08080a]/35 to-transparent z-10" />
 
-        <div className="relative z-20 max-w-6xl mx-auto px-4 sm:px-6 w-full flex flex-col items-center lg:items-start text-center lg:text-left mt-20 sm:mt-24">
+        <div className="relative z-20 max-w-4xl mx-auto px-4 text-center">
           
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900/85 border border-zinc-700/60 backdrop-blur-md mb-5 text-zinc-300 text-xs tracking-wider uppercase">
+          {/* Tag de vertentes musicais */}
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-950/70 border border-zinc-700/60 backdrop-blur-md mb-4 text-zinc-300 text-xs tracking-wider uppercase shadow-lg">
             <Sparkles className="w-3.5 h-3.5 text-amber-400" />
             House • Melodic • Afrohouse • Nu Disco
           </div>
 
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif tracking-tight text-white mb-5 uppercase font-light leading-tight max-w-3xl drop-shadow-lg">
+          {/* Título com sombra de texto pura (drop-shadow) em vez de escurecer a foto inteira */}
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif tracking-tight text-white mb-3 uppercase font-light leading-tight drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
             Elegância, Ritmo e <br />
             <span className="italic font-normal text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100">
               Presença de Pista
             </span>
           </h1>
 
-          <p className="text-zinc-200 text-sm sm:text-base max-w-xl font-light leading-relaxed mb-8 drop-shadow-md">
+          <p className="text-zinc-100 text-sm sm:text-base max-w-2xl mx-auto font-light leading-relaxed mb-7 drop-shadow-[0_2px_10px_rgba(0,0,0,0.9)]">
             A trilha sonora perfeita para restaurantes de alta gastronomia, sunsets exclusivos, 
             beach clubs e celebrações corporativas de alto padrão[cite: 4].
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 w-full sm:w-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a 
               href="#orcamento" 
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold px-7 py-3.5 rounded-xl text-xs uppercase tracking-widest transition-all duration-300 shadow-xl shadow-amber-500/20"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-400 hover:bg-amber-300 text-zinc-950 font-bold px-7 py-3.5 rounded-xl text-xs uppercase tracking-widest transition-all duration-300 shadow-xl shadow-amber-500/25"
             >
               <Calendar className="w-4 h-4" />
-              <span>Consultar Agenda & Orçamento</span>
-            </a>
-            <a 
-              href="#experiencia" 
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-zinc-900/90 hover:bg-zinc-800 border border-zinc-700 text-zinc-200 font-medium px-6 py-3.5 rounded-xl text-xs uppercase tracking-widest transition-all"
-            >
-              <Play className="w-3.5 h-3.5 fill-current text-amber-400" />
-              <span>Ver Apresentação</span>
-            </a>
-          </div>
-
-        </div>
-      </section>
+              <span>Consultar
       
 {/* 3. SETS, VÍDEO & EXPERIÊNCIA AUDITIVA */}
       <section id="experiencia" className="py-20 border-t border-zinc-800/60 bg-zinc-950/50">

@@ -150,7 +150,7 @@ export default function App() {
       </section>
 
       
-{/* 3. SETS, VÍDEO & EXPERIÊNCIA AUDITIVA (PLAYERS INTERATIVOS DIRETOS) */}
+{/* 3. SETS, VÍDEO & EXPERIÊNCIA AUDITIVA */}
       <section id="experiencia" className="py-20 border-t border-zinc-800/60 bg-zinc-950/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -197,7 +197,7 @@ export default function App() {
               </p>
             </div>
 
-            {/* 3 PLAYERS INCORPORADOS DO SOUNDCLOUD COM PLAY DIRETO */}
+            {/* 3 PLAYERS SOUNDCLOUD COM REPRODUÇÃO INDIVIDUAL */}
             <div className="lg:col-span-5 flex flex-col gap-5">
               
               {/* SET 1: AFROHOUSE & HOUSE */}
@@ -229,12 +229,12 @@ export default function App() {
                     scrolling="no" 
                     frameBorder="no" 
                     allow="autoplay; encrypted-media" 
-                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2344417571&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2344417571&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
                   />
                 </div>
               </div>
 
-{/* SET 2: SUNSET ORGANIC HOUSE */}
+              {/* SET 2: SUNSET ORGANIC HOUSE */}
               <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/90 shadow-md">
                 <div className="flex items-center justify-between mb-2.5">
                   <div className="flex items-center gap-2">
@@ -243,16 +243,16 @@ export default function App() {
                     </div>
                     <div>
                       <span className="text-[10px] uppercase font-mono text-zinc-400 tracking-wider block">Sunset Session</span>
-                      <h3 className="text-zinc-100 font-medium text-xs">Sunset Organic House — Live at Shopping</h3>
+                      <h3 className="text-zinc-100 font-medium text-xs">Sunset Organic House Set[cite: 2]</h3>
                     </div>
                   </div>
                   <a 
-                    href="https://soundcloud.com/madame_mazzam/sunset-organic-house" 
+                    href="https://soundcloud.com/madame_mazzam/sunset-organic-house-set-live-at-shopping-evento-minalba-e-lab" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-[11px] font-mono text-zinc-400 hover:text-amber-300 inline-flex items-center gap-1"
                   >
-                    Abrir <ExternalLink className="w-3 h-3" />
+                    Link <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
 
@@ -263,7 +263,7 @@ export default function App() {
                     scrolling="no" 
                     frameBorder="no" 
                     allow="autoplay; encrypted-media" 
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/madame_mazzam/sunset-organic-house&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2216946572&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
                   />
                 </div>
               </div>
@@ -277,16 +277,16 @@ export default function App() {
                     </div>
                     <div>
                       <span className="text-[10px] uppercase font-mono text-zinc-400 tracking-wider block">House Sofisticado</span>
-                      <h3 className="text-zinc-100 font-medium text-xs">Mini Set #1 [30 min]</h3>
+                      <h3 className="text-zinc-100 font-medium text-xs">Mini Set #1 [30 min][cite: 2]</h3>
                     </div>
                   </div>
                   <a 
-                    href="https://soundcloud.com/madame_mazzam/mini-set-1" 
+                    href="https://soundcloud.com/madame_mazzam/mini-set-1-madamme-mazzam-30-min-de-house-sofisticado" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="text-[11px] font-mono text-zinc-400 hover:text-amber-300 inline-flex items-center gap-1"
                   >
-                    Abrir <ExternalLink className="w-3 h-3" />
+                    Link <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
 
@@ -297,7 +297,7 @@ export default function App() {
                     scrolling="no" 
                     frameBorder="no" 
                     allow="autoplay; encrypted-media" 
-                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/madame_mazzam/mini-set-1&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+                    src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2195548507&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
                   />
                 </div>
               </div>

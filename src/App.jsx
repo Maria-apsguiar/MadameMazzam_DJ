@@ -149,7 +149,8 @@ export default function App() {
         </div>
       </section>
 
-      {/* 3. SETS, VÍDEO & EXPERIÊNCIA AUDITIVA */}
+      
+{/* 3. SETS, VÍDEO & EXPERIÊNCIA AUDITIVA (PLAYERS INTERATIVOS DIRETOS) */}
       <section id="experiencia" className="py-20 border-t border-zinc-800/60 bg-zinc-950/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
@@ -158,7 +159,7 @@ export default function App() {
               <h2 className="text-3xl sm:text-4xl font-serif text-white tracking-wide uppercase">Ouça a Sonoridade</h2>
             </div>
             <p className="text-zinc-400 text-sm max-w-md mt-4 md:mt-0 font-light">
-              Sets mixados criados para construir a vibração perfeita de cada momento, do lounge descontraído ao ápice da celebração.
+              Dê o play diretamente na página e sinta a construção da pista: do pôr do sol ao ápice da celebração noturna.
             </p>
           </div>
 
@@ -175,7 +176,7 @@ export default function App() {
                   href="https://youtu.be/-Ni9VMmRRUM?si=8Qgz0cpaokXfmK5v" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-xs text-amber-400 hover:text-amber-300 inline-flex items-center gap-1"
+                  className="text-xs text-amber-400 hover:text-amber-300 inline-flex items-center gap-1 font-medium"
                 >
                   Abrir no App <ExternalLink className="w-3 h-3" />
                 </a>
@@ -192,40 +193,39 @@ export default function App() {
               </div>
 
               <p className="text-xs text-zinc-400 mt-3 px-1 font-light leading-relaxed">
-                Gravado ao vivo na controladora Pioneer XDJ-RR. Transição suave entre vertentes envolventes e energia constante.
+                Gravado ao vivo na controladora Pioneer XDJ-RR. Transição fluida com presença marcante de palco e pista[cite: 2].
               </p>
             </div>
 
-            {/* LINKS DO SOUNDCLOUD COM PLAYER OFICIAL E LINK EXATO */}
-            <div className="lg:col-span-5 flex flex-col gap-4">
+            {/* 3 PLAYERS INCORPORADOS DO SOUNDCLOUD COM PLAY DIRETO */}
+            <div className="lg:col-span-5 flex flex-col gap-5">
               
-              {/* SET 1: AFROHOUSE OFICIAL */}
-              <div className="p-4 rounded-2xl bg-zinc-900/70 border border-amber-500/40 hover:border-amber-500/70 transition-all">
-                <div className="flex items-center justify-between mb-3">
+              {/* SET 1: AFROHOUSE & HOUSE */}
+              <div className="p-4 rounded-2xl bg-zinc-900/80 border border-amber-500/40 shadow-lg">
+                <div className="flex items-center justify-between mb-2.5">
                   <div className="flex items-center gap-2">
-                    <div className="p-2 rounded-lg bg-amber-400/10 text-amber-400">
+                    <div className="p-1.5 rounded-lg bg-amber-400/10 text-amber-400">
                       <Disc className="w-4 h-4 animate-spin-slow" />
                     </div>
                     <div>
                       <span className="text-[10px] uppercase font-mono text-amber-400 tracking-wider block">SoundCloud Oficial</span>
-                      <h3 className="text-zinc-100 font-medium text-xs">Set Afrohouse & House - Madame Mazzam</h3>
+                      <h3 className="text-zinc-100 font-medium text-xs">Set Afrohouse & House - Madame Mazzam[cite: 2]</h3>
                     </div>
                   </div>
                   <a 
                     href="https://soundcloud.com/madame_mazzam/set-afrohouse-house-madame" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-[11px] font-mono text-amber-400 hover:text-amber-300 inline-flex items-center gap-1"
+                    className="text-[11px] font-mono text-zinc-400 hover:text-amber-300 inline-flex items-center gap-1"
                   >
-                    Ouvir <ExternalLink className="w-3 h-3" />
+                    Link <ExternalLink className="w-3 h-3" />
                   </a>
                 </div>
 
-                {/* Player incorporado direto do SoundCloud */}
                 <div className="rounded-xl overflow-hidden border border-zinc-800 bg-black">
                   <iframe 
                     width="100%" 
-                    height="130" 
+                    height="120" 
                     scrolling="no" 
                     frameBorder="no" 
                     allow="autoplay; encrypted-media" 
@@ -235,39 +235,71 @@ export default function App() {
               </div>
 
               {/* SET 2: SUNSET ORGANIC HOUSE */}
-              <div className="p-4 rounded-xl bg-zinc-900/40 border border-zinc-800/90 hover:border-zinc-700 transition-all">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-medium text-zinc-200">Sunset Organic House — Live at Shopping</span>
-                  <span className="text-[10px] text-zinc-400 font-mono">Minalba & E-Lab</span>
+              <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/90 shadow-md">
+                <div className="flex items-center justify-between mb-2.5">
+                  <div className="flex items-center gap-2">
+                    <div className="p-1.5 rounded-lg bg-zinc-800 text-amber-300">
+                      <Music className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] uppercase font-mono text-zinc-400 tracking-wider block">Sunset Session</span>
+                      <h3 className="text-zinc-100 font-medium text-xs">Sunset Organic House — Live at Shopping[cite: 2]</h3>
+                    </div>
+                  </div>
+                  <a 
+                    href="https://soundcloud.com/madame_mazzam" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-mono text-zinc-400 hover:text-amber-300 inline-flex items-center gap-1"
+                  >
+                    Perfil <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
-                <p className="text-zinc-400 text-xs font-light mb-3">Melódico, calmo e sofisticado para ambientes corporativos e gastronômicos.</p>
-                <a 
-                  href="https://soundcloud.com/madame_mazzam" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-xs text-zinc-300 hover:text-amber-400 inline-flex items-center gap-1.5 transition-colors font-medium"
-                >
-                  <span>Acessar faixa no perfil</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </a>
+
+                <div className="rounded-xl overflow-hidden border border-zinc-800 bg-black">
+                  <iframe 
+                    width="100%" 
+                    height="120" 
+                    scrolling="no" 
+                    frameBorder="no" 
+                    allow="autoplay; encrypted-media" 
+                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/madame_mazzam&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+                  />
+                </div>
               </div>
 
               {/* SET 3: MINI SET #1 */}
-              <div className="p-4 rounded-xl bg-zinc-900/40 border border-zinc-800/90 hover:border-zinc-700 transition-all">
-                <div className="flex items-center justify-between mb-2">
-                  <span className="text-xs font-medium text-zinc-200">Mini Set #1 [30 min]</span>
-                  <span className="text-[10px] text-zinc-400 font-mono">House Sofisticado</span>
+              <div className="p-4 rounded-2xl bg-zinc-900/60 border border-zinc-800/90 shadow-md">
+                <div className="flex items-center justify-between mb-2.5">
+                  <div className="flex items-center gap-2">
+                    <div className="p-1.5 rounded-lg bg-zinc-800 text-amber-300">
+                      <Headphones className="w-4 h-4" />
+                    </div>
+                    <div>
+                      <span className="text-[10px] uppercase font-mono text-zinc-400 tracking-wider block">House Sofisticado</span>
+                      <h3 className="text-zinc-100 font-medium text-xs">Mini Set #1 [30 min][cite: 2]</h3>
+                    </div>
+                  </div>
+                  <a 
+                    href="https://soundcloud.com/madame_mazzam" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-[11px] font-mono text-zinc-400 hover:text-amber-300 inline-flex items-center gap-1"
+                  >
+                    Perfil <ExternalLink className="w-3 h-3" />
+                  </a>
                 </div>
-                <p className="text-zinc-400 text-xs font-light mb-3">Seleção dinâmica ideal para coquetéis e aberturas de pistas.</p>
-                <a 
-                  href="https://soundcloud.com/madame_mazzam" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-xs text-zinc-300 hover:text-amber-400 inline-flex items-center gap-1.5 transition-colors font-medium"
-                >
-                  <span>Acessar faixa no perfil</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </a>
+
+                <div className="rounded-xl overflow-hidden border border-zinc-800 bg-black">
+                  <iframe 
+                    width="100%" 
+                    height="120" 
+                    scrolling="no" 
+                    frameBorder="no" 
+                    allow="autoplay; encrypted-media" 
+                    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/madame_mazzam&color=%23f59e0b&auto_play=false&hide_related=false&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+                  />
+                </div>
               </div>
 
             </div>
